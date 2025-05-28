@@ -1,3 +1,5 @@
+import Button from './Button';
+
 const LandingSection = () => {
     return (
         <section className="landing-section">
@@ -36,4 +38,4 @@ const LandingSection = () => {
     );
 };
 
-export default Nav;
+export default LandingSection;

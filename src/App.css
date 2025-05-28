@@ -7,10 +7,10 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+/*
 body{
 
-}
+}*/
 
 header{
   background-color: #FFFFFF;
@@ -48,7 +48,7 @@ nav a {
 .landing-section {
   position: relative;
   height: 100vh;
-  background-image: url('/restaurant_big.jpg');
+  background-image: url('./img/restaurant_big.jpg');
   background-size: cover;
   background-position: center;
   display: flex;
