@@ -1,38 +1,124 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&family=Karla:ital,wght@0,200..800;1,200..800&family=Markazi+Text:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&family=Karla:ital,wght@0,200..800;1,200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header{
+  background-color: #FFFFFF;
+  height: 90px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 150px;
+}
+
+header img{
+  width: 150px;
+}
+
+nav{
+  font-family: "Karla", sans-serif;
+  font-size: 18px;
+  color: #495E57;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.landing-section {
+  position: relative;
+  height: 100vh;
+  background-image: url('/restaurant_big.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+/* New: Overlay Box */
+.overlay-box {
+  width: 100%;
+  max-width: 1290px;
+  aspect-ratio: 1290 / 750;
+  background-color: rgba(17, 19, 44, 0.28);
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+/* Content stays same */
+.content {
+  max-width: 900px;  /* or 1000px — whatever fits your design */
+  width: 100%;       /* so it shrinks on smaller screens */
+  margin: 0 auto;    /* center horizontally */
   color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0 1rem;   /* some horizontal padding for smaller devices */
+  box-sizing: border-box;
 }
 
-.App-link {
-  color: #61dafb;
+/* Headings */
+.content h1 {
+  font-family: "Markazi Text";
+  font-size: 96px medium;
+  color: #F4CE14;
+  margin: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.content h2 {
+  font-family: "Markazi Text";
+  font-size: 48px medium;
+  color: #F4CE14;
+  margin: 0;
+}
+
+/* Columns */
+.content-columns {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+  font-family: "Markazi Text";
+  font-weight: 300;
+  font-style: italic;
+}
+
+/* Buttons */
+.buttons button {
+  font-size: 40px;
+  padding: 20px 40px;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
 }
