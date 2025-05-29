@@ -7,19 +7,21 @@
   padding: 0;
   box-sizing: border-box;
 }
-/*
-body{
 
-}*/
+body {
+  font-family: "Karla", sans-serif;
+  background-color: #fff;
+}
 
-header{
+header {
   background-color: #FFFFFF;
-  height: 90px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row; /* horizontal layout */
   align-items: center;
   justify-content: center;
   gap: 150px;
+  padding: 0 auto;
+  height: 90px; /* restore the height from your Figma */
 }
 
 header img{
@@ -27,9 +29,7 @@ header img{
 }
 
 nav{
-  font-family: "Karla", sans-serif;
   font-size: 18px;
-  color: #495E57;
 }
 
 nav ul {
@@ -43,12 +43,13 @@ nav a {
   text-decoration: none;
   text-transform: uppercase;
   font-weight: bold;
+  color: #495E57;
 }
 
 .landing-section {
   position: relative;
-  height: 100vh;
-  background-image: url('./img/restaurant_big.jpg');
+  height: calc(100vh - 90px);
+  background-image: url('./images/restaurant.png');
   background-size: cover;
   background-position: center;
   display: flex;
@@ -60,14 +61,13 @@ nav a {
 /* New: Overlay Box */
 .overlay-box {
   width: 100%;
-  max-width: 1290px;
-  aspect-ratio: 1290 / 750;
+  margin: 40px;
   background-color: rgba(17, 19, 44, 0.28);
   border-radius: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
+  padding: 5rem;
   box-sizing: border-box;
 }
 
@@ -80,45 +80,126 @@ nav a {
   text-align: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 1.5rem;
   padding: 0 1rem;   /* some horizontal padding for smaller devices */
   box-sizing: border-box;
+  gap: 50px;
 }
 
 /* Headings */
-.content h1 {
+.title-block h1 {
   font-family: "Markazi Text";
-  font-size: 96px medium;
+  font-size: 96px;
+  font-weight: 700;
+  letter-spacing: 10%;
   color: #F4CE14;
   margin: 0;
+  line-height: 1;
+  padding: 0;
 }
 
-.content h2 {
+.title-block h2 {
   font-family: "Markazi Text";
-  font-size: 48px medium;
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: 18%;
   color: #F4CE14;
   margin: 0;
+  line-height: 1;
+  padding: 0;
+  margin-top: -25px;
 }
 
 /* Columns */
 .content-columns {
   display: flex;
-  gap: 2rem;
   justify-content: center;
   flex-wrap: wrap;
-  margin-top: 1rem;
   font-family: "Markazi Text";
-  font-weight: 300;
+  font-size: 32px;
+  font-weight: 100;
   font-style: italic;
+  align-items:last baseline;
+}
+
+.opening-hours,
+.address{
+  font-size: 24px;
+}
+
+.info{
+    margin-bottom: 40px;
 }
 
 /* Buttons */
-.buttons button {
-  font-size: 40px;
-  padding: 20px 40px;
+.buttons{
   display: flex;
-  gap: 1rem;
   justify-content: center;
-  margin-top: 2rem;
+  flex-wrap: wrap;
+  gap: 70px;
+}
+
+button{
+  font-size: 40px;
+  width: 325px;
+  height: 70px;
+  border-radius: 30px;
+  background-color: #F4CE14;
+  color: #495E57;
+  font-family: "Markazi Text";
+  border: none;
+}
+
+button:hover{
+  background-color:#495E57 ;
+  color:#F4CE14;
+}
+
+@media (min-width: 400px) and (max-width: 1024px){
+  header{
+    justify-content: space-between;
+    padding: 40px;
+    gap:0px;
+  }
+  nav ul{
+    gap: 10px;
+    padding: 0;
+  }
+
+  nav{
+    font-size: 14px;
+  }
+
+  button{
+    width: 210px;
+    height: 50px;
+    font-size: 24px;
+  }
+
+  .title-block h1{
+    font-size: 64px;
+    letter-spacing: normal;
+  }
+
+  .title-block h2{
+    font-size: 40px;
+    letter-spacing: normal;
+  }
+
+  .overlay-box {
+    width: 100%;
+    margin: 40px;
+    background-color: rgba(17, 19, 44, 0.28);
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem;
+    box-sizing: border-box;
+  }
+  .buttons{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
 }

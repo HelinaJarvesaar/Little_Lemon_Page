@@ -1,4 +1,4 @@
-import biglogo from "../img/BigLogo.png";
+import biglogo from "../images/BigLogo.png";
 
 const Footer = () => {
     return (
