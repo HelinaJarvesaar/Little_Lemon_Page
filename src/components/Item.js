@@ -1,16 +1,25 @@
-import bike from './images/bike.png';
+import React from 'react'
+import bike from '../images/bike.png';
 
-const Card = ({ title, price, description, imageSrc }) => {
-    return(
-        <div>
-            <img src={imageSrc} alt={title} width="100%"/>
-            <h3>{title}</h3>
-            <p>{price} EUR</p>
-            <p>{description}</p>
-            <h3>Delivery in 20 min</h3>
-            <img src="images/bike.png" alt="bike"/>
+const Item = ({ title, price, description, imageSrc }) => {
+    return (
+        <div className="item-card">
+            <img src={imageSrc} alt={title} className="item-image" />
+
+            <div className="item-header">
+                <h3 className="item-title">{title}</h3>
+                <p className="item-price">{price} EUR</p>
+            </div>
+
+            <p className="item-description">{description}</p>
+
+            <div className="delivery-info">
+                <h3 className="delivery-text">Delivery in 20 min</h3>
+                <img src={bike} alt="bike" className="delivery-icon" />
+            </div>
         </div>
+
     );
 };
 
-export default Card;
+export default Item;

@@ -70,6 +70,7 @@ nav a {
 /* New: Overlay Box */
 .overlay-box {
   width: 100%;
+  height: 85%;
   margin: 40px;
   background-color: rgba(17, 19, 44, 0.28);
   border-radius: 50px;
@@ -83,7 +84,7 @@ nav a {
 /* Content stays same */
 .content {
   max-width: 900px;  /* or 1000px — whatever fits your design */
-  width: 100%;       /* so it shrinks on smaller screens */
+  width: 100%;     /* so it shrinks on smaller screens */
   margin: 0 auto;    /* center horizontally */
   color: white;
   text-align: center;
@@ -166,6 +167,218 @@ button:hover{
 
 
 
+.specials-section {
+  height: 700px;
+  padding: 80px 260px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+/* Header with h1 and button */
+.specials-header {
+  display: flex;
+  justify-content: flex-start; /* keep items close */
+  align-items: center;
+  gap: 520px; /* fixed gap between h1 and button */
+  padding: 0 40px; /* base padding left & right */
+  max-width: 1200px; /* optional max width */
+  margin: 0 auto; /* center container horizontally */
+}
+
+.specials-header button{
+  width: 165px;
+  height: 65px;
+  font-size: 24px;
+}
+
+.specials-section h1{
+  font-family: 'Markazi Text', serif;
+  font-size: 64px;
+  font-weight: medium;
+  color:#495E57;
+}
+
+
+
+
+/* Card layout */
+.specials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 265px);
+  justify-content: center;
+  gap: 50px;
+  max-width: calc(265px * 3 + 2 * 30px); /* width of 3 cards + 2 gaps */
+  margin: 0 auto; /* center grid */
+}
+
+.item-card {
+  width: 270px;
+  height: 400px;
+  background-color: #EDEFEE;
+  border-radius: 12px;
+  box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.item-image {
+  width: 100%;
+  height: 165px;
+  object-fit: cover;
+}
+
+.item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 8px 16px 0 16px;
+}
+
+.item-title {
+  font-family: 'Karla', sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin: 0;
+  color: #495E57;
+}
+
+.item-price {
+  font-family: 'Karla', sans-serif;
+  font-weight: bold;
+  color: #EE9972;
+  margin: 0;
+}
+
+.item-description {
+  margin: 8px 16px 0 16px;
+  font-family: 'Karla', sans-serif;
+  font-size: 16px;
+  color: #495E57;
+  flex-grow: 1;
+}
+
+.delivery-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 16px 12px 16px;
+}
+
+.delivery-text {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #495E57;
+}
+
+.delivery-icon {
+  width: 24px;
+  height: 24px;
+  color: #495E57;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.about {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 80px 300px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  height: 700px;
+}
+
+.about article {
+  flex: 1 1 300px;
+  max-width: 380px;
+}
+
+.about h2 {
+    font-family: "Markazi Text";
+    font-weight: medium;
+    font-size: 64px;
+    letter-spacing: 5%;
+    margin: 0px;
+    color: #F4CE14;
+}
+
+.about h3 {
+    font-family: "Markazi Text";
+    font-weight: regular;
+    font-size: 40px;
+    color: #F4CE14;
+    margin-top: -35px;
+    margin-bottom: 60px;
+}
+
+.about p {
+  font-family: "Karla" sans-serif;
+  font-size: 18px;
+  font-weight: light;
+  line-height: 1.6;
+  color:#495E57;
+}
+
+.about > div {
+  flex: 1 1 300px;
+  position: relative;
+  min-width: 300px;
+  height: 350px;
+  margin-top: 70px;
+  max-width: 500px;
+}
+
+/* Diagonal image layout */
+.about > div img:first-of-type {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  width: 250px;
+  height: 300px;
+  border-radius: 30px;
+  box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.25);
+  z-index: 1;
+}
+
+.about > div img:last-of-type {
+  position: absolute;
+  top: 20px;
+  right: 0;
+  width: 250px;
+  height: 300px;
+  border-radius: 30px;
+  box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.25);
+  z-index: 2;
+  transform: translate(20%, -20%);
+}
+
+
+
+
+
+
+
+
 
 
 
@@ -210,7 +423,7 @@ footer a:hover {
 
 
 
-@media (max-width: 768px) and (max-width: 1024px){
+@media (max-width: 768px){
   header{
     justify-content: space-between;
     padding: 0 1rem;
@@ -284,9 +497,16 @@ footer a:hover {
     font-size: 24px;
   }
 
+  button:hover {
+    background-color: #F4CE14;
+    color: #495E57;
+  }
+
+
   .overlay-box {
     width: 100%;
-    margin: 40px;
+    height: 80%;
+    /*margin: 40px;*/
     padding: 4rem;
   }
 
@@ -295,6 +515,107 @@ footer a:hover {
     justify-content: center;
     flex-wrap: wrap;
     gap: 40px;
+  }
+
+
+
+  .specials-section {
+    padding: 40px 20px;
+    height: auto;
+  }
+
+  .specials-header {
+    flex-direction: column;
+    align-items: center;  /* Center both h1 and button horizontally */
+    text-align: center;
+    gap: 16px;
+  }
+
+
+  specials-header button{
+   width: 165px;
+   height: 50px;
+   font-size: 24px;
+  }
+
+
+
+  .specials-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .item-card {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+  }
+
+  .item-image {
+    height: 180px;
+  }
+
+  .item-description {
+    font-size: 1rem;
+  }
+
+  .delivery-info {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .about .container {
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    max-width: 720px;
+    margin: 0 auto;
+    height: relative;
+  }
+
+  .about{
+    padding: 60px 70px;
+    position: relative;
+    height: 1200px;
+  }
+
+  .about article {
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+  }
+
+  .about article h2{
+    white-space: nowrap;
+  }
+
+  .about article p {
+    max-width: 600px; /* enough space */
+    margin: 0 auto;
+    line-height: 1.5;
+  }
+
+  .about > div{
+    position: relative;
+    margin: 20px 50px 20px 0;
   }
 
 
