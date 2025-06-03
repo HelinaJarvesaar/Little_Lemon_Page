@@ -1,96 +1,51 @@
-function TestimonialsSection({ children }) {
+import React from 'react';
+import Testimonial from './Testimonial';
+/*import testimonials from '../data/testimonialsData';*/
+
+const testimonials = [
+  {
+    name: "Giulia R.",
+    rating: 5,
+    text: "Absolutely loved the ambiance and flavors! Felt like home.",
+    getImageSrc: () => require("../images/giulia.jpg"),
+  },
+  {
+    name: "Luca M.",
+    rating: 4,
+    text: "A cozy little spot with authentic Italian taste. Will come again!",
+    getImageSrc: () => require("../images/luca.jpg"),
+  },
+  {
+    name: "Emma T.",
+    rating: 5,
+    text: "The lemon dessert is a must-try! Service was fantastic too.",
+    getImageSrc: () => require("../images/emma.jpg"),
+  },
+  {
+    name: "James B.",
+    rating: 4,
+    text: "Fresh ingredients and beautiful presentation. Highly recommend!",
+    getImageSrc: () => require("../images/james.jpg"),
+  },
+];
+
+function TestimonialsSection() {
   return (
-    <>
-    </>
+    <section className="testimonials-section">
+      <h1>Testimonials</h1>
+      <div className="testimonials-grid">
+        {testimonials.map((t) => (
+          <Testimonial
+            key={t.name}
+            name={t.name}
+            rating={t.rating}
+            text={t.text}
+            imageSrc={t.getImageSrc()}
+          />
+        ))}
+      </div>
+    </section>
   );
 }
 
 export default TestimonialsSection;
-
-import React from 'react';
-
-export function showStars() {
-    return (
-            <img
-                height={15}
-                src={require('../assets/star.jpg')}
-                alt={"star"}
-            />
-    );
-}
-
-function CustomersSay() {
-    return (
-    <section className='testimonials'>
-        <h2>Testimonials</h2>
-        <aside>
-            <article>
-                {showStars()}
-                {showStars()}
-                {showStars()}
-                {showStars()}
-                {showStars()}
-                <div>
-                    <img
-                        height={50}
-                        src={require('../assets/sara.jpg')}
-                        alt={"sara"}
-                    />
-                        <p>Sara</p>
-                </div>
-                <p>“Seriously cannot stop thinking about the Turkish Mac n’ Cheese!”</p>
-            </article>
-            <article>
-                {showStars()}
-                {showStars()}
-                {showStars()}
-                {showStars()}
-                {showStars()}
-                <div>
-                    <img
-                        height={50}
-                        src={require('../assets/jhon.jpg')}
-                        alt={"jhon"}
-                    />
-                        <p>Jhon</p>
-                </div>
-                <p>“This is the most delicious pasta I have ever tasted!”</p>
-            </article>
-            <article>
-                {showStars()}
-                {showStars()}
-                {showStars()}
-                {showStars()}
-                {showStars()}
-                <div>
-                    <img
-                        height={50}
-                        src={require('../assets/devid.jpg')}
-                        alt={"Devid"}
-                    />
-                        <p>Devid</p>
-                </div>
-                <p>“I recommend trying the dessert! Very tasty!!”</p>
-            </article>
-            <article>
-                {showStars()}
-                {showStars()}
-                {showStars()}
-                {showStars()}
-                {showStars()}
-                <div>
-                    <img
-                        height={50}
-                        src={require('../assets/elizabet.jpg')}
-                        alt={"elizabet"}
-                    />
-                        <p>Elizabet</p>
-                </div>
-                <p>“Definitely the best restaurant. Discovery of the year!”</p>
-            </article>
-        </aside>
-    </section>
-    )
-}
-
-export default CustomersSay;

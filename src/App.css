@@ -13,15 +13,16 @@ body {
   background-color: #fff;
 }
 
+/*Header with nav*/
 header {
   background-color: #FFFFFF;
   display: flex;
-  flex-direction: row; /* horizontal layout */
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   padding: 0 auto;
   height: 90px;
-  gap: 100px;
+  gap: 200px;
 }
 
 .hamburger {
@@ -55,6 +56,7 @@ nav a {
   color: #495E57;
 }
 
+/* Landing Section*/
 .landing-section {
   position: relative;
   height: calc(100vh - 90px);
@@ -67,7 +69,6 @@ nav a {
   padding: 1rem;
 }
 
-/* New: Overlay Box */
 .overlay-box {
   width: 100%;
   height: 85%;
@@ -81,21 +82,19 @@ nav a {
   box-sizing: border-box;
 }
 
-/* Content stays same */
 .content {
-  max-width: 900px;  /* or 1000px — whatever fits your design */
-  width: 100%;     /* so it shrinks on smaller screens */
-  margin: 0 auto;    /* center horizontally */
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
   color: white;
   text-align: center;
   display: flex;
   flex-direction: column;
-  padding: 0 1rem;   /* some horizontal padding for smaller devices */
+  padding: 0 1rem;
   box-sizing: border-box;
   gap: 50px;
 }
 
-/* Headings */
 .title-block h1 {
   font-family: "Markazi Text";
   font-size: 96px;
@@ -119,7 +118,6 @@ nav a {
   margin-top: -25px;
 }
 
-/* Columns */
 .content-columns {
   display: flex;
   justify-content: center;
@@ -139,6 +137,7 @@ nav a {
 .info{
     margin-bottom: 40px;
 }
+
 
 /* Buttons */
 .buttons{
@@ -166,23 +165,23 @@ button:hover{
 
 
 
-
+/* Specials Section */
 .specials-section {
   height: 700px;
-  padding: 80px 260px;
+  padding: 80px 5%;
   display: flex;
   flex-direction: column;
   gap: 40px;
 }
-/* Header with h1 and button */
+
 .specials-header {
   display: flex;
-  justify-content: flex-start; /* keep items close */
+  justify-content: flex-start;
   align-items: center;
-  gap: 520px; /* fixed gap between h1 and button */
-  padding: 0 40px; /* base padding left & right */
-  max-width: 1200px; /* optional max width */
-  margin: 0 auto; /* center container horizontally */
+  gap: 520px;
+  padding: 0 40px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .specials-header button{
@@ -199,16 +198,14 @@ button:hover{
 }
 
 
-
-
 /* Card layout */
 .specials-grid {
   display: grid;
   grid-template-columns: repeat(3, 265px);
   justify-content: center;
   gap: 50px;
-  max-width: calc(265px * 3 + 2 * 30px); /* width of 3 cards + 2 gaps */
-  margin: 0 auto; /* center grid */
+  max-width: calc(265px * 3 + 2 * 30px);
+  margin: 0 auto;
 }
 
 .item-card {
@@ -280,22 +277,88 @@ button:hover{
 }
 
 
+/*Testimonials Section*/
+
+.testimonials-section {
+  height: 400px;
+  padding: 40px 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  background-color: #edefee;
+}
+
+.testimonials-section h1 {
+  font-family: 'Markazi Text', serif;
+  font-size: 64px;
+  font-weight: medium;
+  color: #495E57;
+  text-align: center;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 40px;
+  max-width: 1000px; /* optional max width to keep it from stretching too much */
+  margin: 0 auto; /* center the grid */
+}
+
+
+.testimonial-card {
+  width: 240px;
+  height: 165px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.1);
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: 'Karla', sans-serif;
+}
+
+/* Star rating */
+.testimonial-card .testimonial-rating {
+  color: #f4ce14;
+  font-size: 16px;
+  display: flex;
+  gap: 2px;
+}
+
+
+.testimonial-body {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 8px 0;
+}
+
+.testimonial-card .testimonial-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.testimonial-card .testimonial-text {
+  font-size: 14px;
+  color: #495E57;
+  line-height: 1.3;
+  flex: 1;
+}
+
+.testimonial-card .testimonial-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #495e57;
+  text-align: start;
+}
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+/*About Section*/
 .about {
   display: flex;
   flex-direction: row;
@@ -375,14 +438,7 @@ button:hover{
 
 
 
-
-
-
-
-
-
-
-
+/*Footer*/
 footer {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -419,6 +475,122 @@ footer a:hover {
 
 
 
+
+@media (max-width: 1024px) {
+  /* Header */
+  header {
+    gap: 100px;
+    padding: 0 40px;
+  }
+
+  nav {
+    font-size: 16px;
+  }
+
+  nav ul {
+    gap: 16px;
+  }
+
+  /* Landing section */
+  .overlay-box {
+    padding: 3rem;
+  }
+
+  .title-block h1 {
+    font-size: 80px;
+  }
+
+  .title-block h2 {
+    font-size: 40px;
+  }
+
+  .content-columns {
+    font-size: 26px;
+  }
+
+  .buttons {
+    gap: 40px;
+  }
+
+  button {
+    width: 260px;
+    height: 60px;
+    font-size: 30px;
+  }
+
+  /* Specials section */
+  .specials-section {
+    padding: 60px 160px;
+    gap: 30px;
+  }
+
+  .specials-header {
+    gap: 120px;
+    padding: 0 20px;
+  }
+
+  .specials-grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 40px;
+  }
+
+  .item-card {
+    width: 100%;
+    max-width: 270px;
+  }
+
+  /* Testimonials */
+  .testimonials-section {
+    padding: 60px 60px;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+  }
+
+  .testimonial-card {
+    width: 100%;
+    max-width: 240px;
+  }
+
+  /* About */
+  .about {
+    padding: 60px 160px;
+    gap: 40px;
+  }
+
+  .about h2 {
+    font-size: 48px;
+  }
+
+  .about h3 {
+    font-size: 32px;
+    margin-top: -25px;
+    margin-bottom: 40px;
+  }
+
+  .about p {
+    font-size: 16px;
+  }
+
+  .about > div {
+    max-width: 400px;
+    margin-top: 50px;
+  }
+
+
+  /* Footer */
+  footer {
+    padding: 3rem 8rem;
+    gap: 3rem;
+    margin-top: 300px;
+  }
+
+  footer li {
+    font-size: 16px;
+  }
+}
 
 
 
@@ -532,7 +704,7 @@ footer a:hover {
   }
 
 
-  specials-header button{
+  .specials-header button{
    width: 165px;
    height: 50px;
    font-size: 24px;
@@ -568,16 +740,17 @@ footer a:hover {
 
 
 
-
-
-
-
-
-
-
-
-
-
+  .testimonials-section {
+    padding: 60px 40px;
+    height: auto;
+  }
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .testimonials-section h1 {
+    font-size: 48px;
+  }
 
 
 
@@ -586,15 +759,12 @@ footer a:hover {
     flex-direction: column;
     align-items: center;
     width: 90%;
-    max-width: 720px;
-    margin: 0 auto;
-    height: relative;
   }
 
   .about{
-    padding: 60px 70px;
+    padding: 40px 70px;
     position: relative;
-    height: 1200px;
+    height: 1000px;
   }
 
   .about article {
@@ -615,12 +785,30 @@ footer a:hover {
 
   .about > div{
     position: relative;
-    margin: 20px 50px 20px 0;
+    margin: 0 auto;
   }
 
+  .about > div img:first-of-type {
+    position: absolute;
+    top: 300px;
+    left: 0;
+    width: 250px;
+    height: 300px;
+    border-radius: 30px;
+    box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.25);
+    z-index: 1;
+  }
 
-
-
+  .about > div img:last-of-type {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 250px;
+    height: 300px;
+    border-radius: 30px;
+    box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.25);
+    z-index: 1;
+  }
 
 
 
@@ -630,6 +818,7 @@ footer a:hover {
     text-align: center;
     padding: 50px 0px;
     gap: 30px;
+    margin-top: 300px;
   }
 
   footer img {

@@ -24,7 +24,8 @@ const items = [
 
 ]
 
-function SpecialsSection({ children }) {
+
+function SpecialsSection() {
   return (
     <section className="specials-section">
       <div className="specials-header">
