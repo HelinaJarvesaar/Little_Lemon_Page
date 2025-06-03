@@ -25,7 +25,7 @@ const items = [
 ]
 
 
-function SpecialsSection() {
+function ItemsSection() {
   return (
     <section className="specials-section">
       <div className="specials-header">
@@ -47,4 +47,4 @@ function SpecialsSection() {
   );
 }
 
-export default SpecialsSection;
+export default ItemsSection;

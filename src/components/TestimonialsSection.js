@@ -1,6 +1,5 @@
 import React from 'react';
 import Testimonial from './Testimonial';
-/*import testimonials from '../data/testimonialsData';*/
 
 const testimonials = [
   {

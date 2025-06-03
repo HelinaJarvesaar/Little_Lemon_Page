@@ -1,5 +1,5 @@
 import LandingSection from './LandingSection';
-import SpecialsSection from './SpecialsSection';
+import ItemsSection from './ItemsSection';
 import TestimonialsSection from './TestimonialsSection';
 import AboutSection from './AboutSection';
 
@@ -7,7 +7,7 @@ function Main() {
   return (
     <main>
       <LandingSection />
-      <SpecialsSection />
+      <ItemsSection />
       <TestimonialsSection />
       <AboutSection />
     </main>
