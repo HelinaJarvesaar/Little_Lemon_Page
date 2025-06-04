@@ -616,8 +616,10 @@ footer a:hover {
     position: absolute;
     z-index: 1000;
     top: 70px; /* adjust as needed */
-    right: 0rem;
-    padding: 1rem;
+    right: 0px;
+    padding: 70px;
+    height: 100vh;
+    gap: 50px
   }
 
   /* Show nav links if menu is open */
@@ -636,7 +638,7 @@ footer a:hover {
   }
 
   nav{
-    font-size: 10px;
+    font-size: 16px;
   }
 
   .landing-section {

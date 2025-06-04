@@ -5,7 +5,7 @@ const LandingSection = () => {
         <section className="landing-section">
             <div className="overlay-box">
                 <div className="content">
-                    <div class="title-block">
+                    <div className="title-block">
                         <h1>Little Lemon</h1>
                         <h2>Florence</h2>
                     </div>
