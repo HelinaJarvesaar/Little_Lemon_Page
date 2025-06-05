@@ -24,7 +24,7 @@ const LandingSection = () => {
                     </div>
                     <div className="buttons">
                         <Button to="/order">Order For Delivery</Button>
-                        <Button to="/reservation">Book A Table</Button>
+                        <Button to="/booking-page">Book A Table</Button>
                     </div>
                 </div>
             </div>

@@ -1,19 +1,14 @@
+import { fetchAPI } from '../api'; // Adjust path if needed
+
 export function initializeTimes() {
-  return [
-    "17:00",
-    "18:00",
-    "19:00",
-    "20:00",
-    "21:00",
-    "22:00",
-  ];
+  const today = new Date().toISOString().split("T")[0];
+  return fetchAPI(today); // This must call fetchAPI
 }
 
 export function timesReducer(state, action) {
   switch (action.type) {
     case "UPDATE_TIMES":
-      // You can use action.date later to change logic
-      return initializeTimes();
+      return fetchAPI(action.date); // Also must call fetchAPI
     default:
       return state;
   }

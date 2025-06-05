@@ -3,7 +3,7 @@ import BookingForm from "../components/BookingForm";
 import { fetchAPI } from "../api";
 import { submitAPI } from "../api";
 
-function Bookings() {
+function BookingPage({submitForm}) {
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
   const [guests, setGuests] = useState(1);
@@ -38,13 +38,7 @@ function Bookings() {
   const handleSubmit = (e) => {
     e.preventDefault();
     const formData = { date, time, guests, occasion };
-    const success = submitAPI(formData);
-    if (success) {
-      alert("Reservation successful!");
-      // Optionally reset form
-    } else {
-      alert("Reservation failed. Please try again.");
-    }
+    submitForm(formData);
   };
 
   return (
@@ -63,4 +57,4 @@ function Bookings() {
   );
 }
 
-export default Bookings;
+export default BookingPage;
