@@ -37,7 +37,7 @@
 
 ## Project link:
 
-- [**Figma work**](https://www.figma.com/design/A0gULYHzx53i0sTHk4fU9G/Little-Lemon-Restaurant?node-id=438-94&t=528u1ipnb8EE9NBV-1)
+- [**Figma project**](https://www.figma.com/design/A0gULYHzx53i0sTHk4fU9G/Little-Lemon-Restaurant?node-id=438-94&t=528u1ipnb8EE9NBV-1)
 
 - [**Figma mobile prototype**](https://www.figma.com/proto/A0gULYHzx53i0sTHk4fU9G/Little-Lemon-Restaurant?node-id=439-95&t=XRQOAzSz2PR20Ghq-1&scaling=scale-down&content-scaling=fixed&page-id=438%3A94&starting-point-node-id=439%3A95)
 
