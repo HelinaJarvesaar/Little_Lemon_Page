@@ -33,6 +33,7 @@
 
 - Create Order Online Page
 - Create Menu Page
+- As Figma project and App project were different tasks, then there is a need to make App and Figma work look a same, right now there are some differences.
 
 ## Project link:
 
