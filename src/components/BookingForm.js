@@ -161,7 +161,7 @@ function BookingForm({
           ></textarea>
         </fieldset>
 
-        <input type="submit" value="Book a Table" disabled={!isDateValid} aria-label="On Click" />
+        <input type="submit" class="button" value="Book a Table" disabled={!isDateValid} aria-label="On Click" />
       </form>
     </section>
   )

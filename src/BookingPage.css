@@ -112,9 +112,9 @@ body, html {
 }
 
 .bookingform legend {
-    display:grid;
-    grid-template-columns: 400px 1fr;
-    align-items: center;
+  display:grid;
+  grid-template-columns: 400px 1fr;
+  align-items: center;
   font-family: 'Markazi Text', serif;
   font-size: 28px;
   font-weight: 500;
@@ -165,20 +165,18 @@ body, html {
 .bookingform textarea {
   resize: vertical;
 }
-
-.bookingform input[type="submit"] {
+input.button {
+  font-size: 40px;
+  width: 325px;
+  height: 70px;
+  border-radius: 30px;
   background-color: #F4CE14;
   color: #495E57;
-  font-family: 'Markazi Text', serif;
-  font-size: 24px;
-  font-weight: 700;
+  font-family: "Markazi Text";
   border: none;
-  border-radius: 30px;
-  padding: 14px 0;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-  width: 100%;
-  max-width: 300px;
+  user-select: none;
+  text-transform: none; /* input uses value text */
   justify-self: center;
   margin-top: 15px;
   grid-column: 1 / -1; /* span both columns */
@@ -187,12 +185,12 @@ body, html {
   width: 100%;
 }
 
-.bookingform input[type="submit"]:hover:not(:disabled) {
+input.button:hover:not(:disabled) {
   background-color: #495E57;
   color: #F4CE14;
 }
 
-.bookingform input[type="submit"]:disabled {
+input.button:disabled {
   opacity: 0.6;
   cursor: not-allowed;
 }
@@ -214,4 +212,93 @@ body, html {
 .bookingform select:focus {
   outline: none;
   border-color: #F4CE14;
+}
+
+/* Responsive for tablets and below */
+@media (max-width: 1024px) {
+  .bookingform header > div:nth-child(2) {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .bookingform .open-hours,
+  .bookingform .address {
+    flex: none;
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .bookingform form {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 600px;
+    margin: 40px auto 40px auto; /* reduced bottom margin */
+  }
+
+  .bookingform form > fieldset:nth-child(3) {
+    max-width: 100%;
+  }
+
+  .bookingform legend {
+    font-size: 24px;
+  }
+
+  input.button {
+    width: 260px;
+    height: 60px;
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+}
+
+
+
+/* Responsive for mobile phones */
+
+@media (max-width: 768px) {
+  .bookingform header {
+    height: auto;
+    padding: 1.5rem 1rem;
+    gap: 30px;
+  }
+
+  .bookingform .title-block h1 {
+    font-size: 48px;
+  }
+
+  .bookingform .title-block h2 {
+    font-size: 28px;
+    margin-top: -10px;
+  }
+
+  .bookingform header > div:nth-child(2) {
+    gap: 15px;
+  }
+
+  .bookingform .open-hours,
+  .bookingform .address {
+    font-size: 14px;
+  }
+
+  .bookingform form {
+    max-width: 100%;
+    padding: 0 1rem;
+    margin: 30px auto 30px auto;
+    gap: 15px;
+  }
+
+  .bookingform legend {
+    font-size: 20px;
+  }
+
+  .input.button {
+    width: 210px;
+    height: 50px;
+    font-size: 24px;
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
 }
