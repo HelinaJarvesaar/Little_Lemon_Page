@@ -1,14 +1,26 @@
 <p align="center">
   <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" width="100" alt="React Logo" />
+  <img src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png" alt="Figma" width="100" />
 </p>
 
-# Little Lemon Restaurant - Booking Table App
+# Little Lemon Restaurant
+# Booking Table App & Order for Delivery UX/UI Project
 
 ## Overview:
 
-This is a responsive restaurant app with table reservation form, built with React. 
-It includes form validation, accessibility features (like semantic HTML and ARIA attributes), and is tested using Jest and React Testing Library.
+- This project was created as part of the Meta Front-End Developer course on Coursera.
+- The goal was to design and prototype a **mobile-friendly "Reserve a Table" feature** for a fictional cozy Italian restaurant named **Little Lemon**, set in Florence, Italy.
+- The project includes the **entire UX/UI process**, from defining the problem to delivering an interactive, high-fidelity Figma prototype.
 
+- Responsive restaurant app with table reservation form is built with React. 
+- It includes form validation, accessibility features (like semantic HTML and ARIA attributes), and is tested using Jest and React Testing Library.
+
+## Objectives
+
+- Improve customer experience by enabling online table reservations.
+- Design a mobile-first, intuitive flow with clear visual hierarchy.
+- Reflect the warm, authentic brand of a small Italian restaurant.
+- Include food ordering functionality with confirmation flow.
 
 ## Technologies Used:
 
@@ -51,4 +63,10 @@ It includes form validation, accessibility features (like semantic HTML and ARIA
 <img width="1000" alt="Screenshot 2025-06-06 at 18 37 25" src="https://github.com/user-attachments/assets/80ba0bbe-77c1-4394-b8e6-5cf0e19a7818" />
 <img width="1000" alt="Screenshot 2025-06-06 at 18 33 27" src="https://github.com/user-attachments/assets/73ef20db-ea14-4fb4-b90a-a958c610cf8d" />
 
+
+<img width="900" alt="Screenshot 2025-05-25 at 18 59 27" src="https://github.com/user-attachments/assets/ac0c4b75-570d-49df-843d-b8cdf7a4fdb8" />
+
+<img width="900" alt="Screenshot 2025-05-27 at 13 09 31" src="https://github.com/user-attachments/assets/bcb24e39-bc70-46c3-a302-8b8e2c22a4e1" />
+
+<img width="900" alt="Screenshot 2025-05-27 at 13 16 55" src="https://github.com/user-attachments/assets/114548d1-29eb-43f6-8961-6e1ce5fad84d" />
 
