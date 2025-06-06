@@ -28,11 +28,18 @@ It includes form validation, accessibility features (like semantic HTML and ARIA
 
 ## Steps to Run:
 1. Clone repository
-   ``bash
+   ```bash
    git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
-```
-
+   cd your-repo-name
+   ```
+2. Install dependencies, Make sure you have Node.js installed, then run:
+   ```bash
+   npm install
+   ```
+3. Start the development server (This will start the app on http://localhost:3000 in your browser):
+   ```bash
+   npm start
+   ```
 
 
 ## Screenshots:
