@@ -39,6 +39,8 @@
 
 - [**Figma work**](https://www.figma.com/design/A0gULYHzx53i0sTHk4fU9G/Little-Lemon-Restaurant?node-id=438-94&t=528u1ipnb8EE9NBV-1)
 
+- [**Figma mobile prototype**](https://www.figma.com/design/A0gULYHzx53i0sTHk4fU9G/Little-Lemon-Restaurant?node-id=439-95&t=16IibUncHBHwO0Hz-1)
+
 ## Steps to Run:
 1. Clone repository
    ```bash
