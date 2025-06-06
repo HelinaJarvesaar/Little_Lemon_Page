@@ -22,7 +22,7 @@ function Main() {
     } else {
       alert("Failed to submit reservation.");
     }
-  }
+  };
 
   return (
     <main>

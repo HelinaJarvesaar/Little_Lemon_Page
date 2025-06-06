@@ -12,6 +12,7 @@ const Nav = () => {
           <li><Link to="/booking-page">Reservations</Link></li>
           <li><Link to="/order-online">Order Online</Link></li>
           <li><Link to="/about">About</Link></li>
+          <li><a href="#contact">Contacts</a></li>
           <li><Link to="/">Home</Link></li>
         </ul>
       </nav>

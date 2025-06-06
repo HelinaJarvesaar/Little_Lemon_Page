@@ -7,6 +7,7 @@ import { BrowserRouter, useNavigate } from "react-router-dom";
 import Routing from "./components/Routing";
 import { submitAPI } from "./api";
 import { getBookingsFromStorage, saveBookingsToStorage } from './utils/storage';
+import ScrollToTop from './components/ScrollToTop';
 
 
 function AppWrapper() {
@@ -48,6 +49,7 @@ function AppWrapper() {
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <AppWrapper />
     </BrowserRouter>
   );

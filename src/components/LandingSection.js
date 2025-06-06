@@ -17,8 +17,8 @@ const LandingSection = () => {
                         </div>
                         <div className="open-hours">
                             <p><b>Opening Hours:</b></p>
-                            <p><b>Mo - Thu 08:00 - 21:00</b></p>
-                            <p><b>Fri - Sun 08:00 - 24:00</b></p>
+                            <p><b>Mo - Thu 10:00 - 21:00</b></p>
+                            <p><b>Fri - Sun 10:00 - 24:00</b></p>
                             <p><b>Florence Str 17, Florence, Italy</b></p>
                         </div>
                     </div>

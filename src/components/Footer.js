@@ -1,20 +1,21 @@
+import { Link } from "react-router-dom";
 import biglogo from "../images/BigLogo.png";
+
 
 const Footer = () => {
     return (
-        <footer>
+        <footer id="contact">
             <img src={biglogo} alt="Little Lemon logo" width="95" />
             <div className="navigation">
                 <ul>
                     <li><b>Doormat</b></li>
                     <li><b>Navigation</b></li>
-                    <li><a href="#reservations">Reservations</a></li>
-                    <li><a href="#order">Order online</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#menu">Menu</a></li>
-                    <li><a href="#home">Home</a></li>
+                    <li><Link to="/booking-page">Reservations</Link></li>
+                    <li><Link to="/order-online">Order online</Link></li>
+                    <li><Link to="/about">About</Link></li>
+                    <li><Link to="*">Home</Link></li>
                 </ul>
-            </div>
+                </div>
             <div className="contacts">
                 <ul>
                     <li><b>Contacts</b></li>

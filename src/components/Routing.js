@@ -5,6 +5,7 @@ import ItemsSection from "../components/ItemsSection";
 import AboutSection from "../components/AboutSection";
 import Main from "../pages/Main";
 import ConfirmedBookingPage from "../pages/ConfirmedBookingPage";
+import Footer from '../components/Footer';
 
 
 function Routing({ submitForm, bookingData }) {

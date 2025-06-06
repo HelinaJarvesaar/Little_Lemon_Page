@@ -147,7 +147,7 @@ nav a {
   gap: 70px;
 }
 
-button{
+.button{
   font-size: 40px;
   width: 325px;
   height: 70px;
@@ -156,9 +156,16 @@ button{
   color: #495E57;
   font-family: "Markazi Text";
   border: none;
+
+  display: inline-flex; /* to behave like button */
+  justify-content: center;
+  align-items: center;
+  text-decoration: none; /* remove underline for links */
+  cursor: pointer;
+  user-select: none;
 }
 
-button:hover{
+.button:hover{
   background-color:#495E57 ;
   color:#F4CE14;
 }
@@ -184,7 +191,7 @@ button:hover{
   margin: 0 auto;
 }
 
-.specials-header button{
+.specials-header .button{
   width: 165px;
   height: 65px;
   font-size: 24px;
