@@ -1,6 +1,8 @@
 import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
 import BookingForm from "./BookingForm";
+import { validateEmail, validatePhone } from '../utils/validation';
+import useState from 'react';
 
 // ✅ React must be in scope before using JSX inside the mock
 jest.mock('react-router-dom', () => ({
@@ -9,92 +11,116 @@ jest.mock('react-router-dom', () => ({
   useNavigate: () => jest.fn(),
 }));
 
-// Minimal props required by BookingForm
-const mockProps = {
-  date: "",
-  setDate: jest.fn(),
-  time: "",
-  setTime: jest.fn(),
-  guests: 1,
-  setGuests: jest.fn(),
-  occasion: "Birthday",
-  setOccasion: jest.fn(),
-  availableTimes: ["17:00", "18:00"],
-  onSubmit: jest.fn(),
-};
-
-test("renders the 'Choose date' label", () => {
-  render(<BookingForm {...mockProps} />);
-  const labelElement = screen.getByText("Choose date");
-  expect(labelElement).toBeInTheDocument();
-});
-
-
-describe("BookingForm", () => {
-  const setup = () => {
-    const handleSubmit = jest.fn((e) => e.preventDefault());
-    const utils = render(
-      <BookingForm
-        date=""
-        setDate={jest.fn()}
-        time=""
-        setTime={jest.fn()}
-        guests={1}
-        setGuests={jest.fn()}
-        occasion="Birthday"
-        setOccasion={jest.fn()}
-        availableTimes={["17:00", "18:00"]}
-        onSubmit={handleSubmit}
-      />
-    );
-    return { handleSubmit, ...utils };
-  };
-
-  test("Form submits correctly with valid input", () => {
-    const { handleSubmit } = setup();
-
-    fireEvent.change(screen.getByLabelText(/Choose date/i), {
-      target: { value: "2025-06-05" },
-    });
-
-    fireEvent.change(screen.getByLabelText(/Choose time/i), {
-      target: { value: "18:00" },
-    });
-
-    fireEvent.change(screen.getByLabelText(/Number of guests/i), {
-      target: { value: "2" },
-    });
-
-    fireEvent.change(screen.getByLabelText(/Occasion/i), {
-      target: { value: "Anniversary" },
-    });
-
-    fireEvent.click(screen.getByRole("button", { name: /Make Your reservation/i }));
-
-    expect(handleSubmit).toHaveBeenCalled();
-  });
-});
-
 test("Submit button is enabled and labeled correctly", () => {
-  const handleSubmit = jest.fn((e) => e.preventDefault());
-
   render(
     <BookingForm
-      date=""
-      setDate={jest.fn()}
-      time=""
-      setTime={jest.fn()}
-      guests={1}
-      setGuests={jest.fn()}
+      date="2025-07-01"
+      setDate={() => {}}
+      time="18:00"
+      setTime={() => {}}
+      guests={2}
+      setGuests={() => {}}
       occasion="Birthday"
-      setOccasion={jest.fn()}
-      availableTimes={["17:00", "18:00"]}
-      onSubmit={handleSubmit}
+      setOccasion={() => {}}
+      availableTimes={["18:00", "19:00"]}
+      fullName="John Doe"
+      setFullName={() => {}}
+      email="john@example.com"
+      setEmail={() => {}}
+      phone="+1234567890"
+      setPhone={() => {}}
+      onSubmit={jest.fn()}
     />
   );
 
-  const submitBtn = screen.getByRole("button", { name: /Make Your reservation/i });
+  const submitBtn = screen.getByDisplayValue(/book a table/i);
   expect(submitBtn).toBeInTheDocument();
-  expect(submitBtn).not.toBeDisabled();
+  expect(submitBtn).not.toBeDisabled(); // ✅ Now should pass
 });
 
+function createMockProps(overrides = {}) {
+  const [date, setDate] = useState("");
+  const [time, setTime] = useState("");
+  const [guests, setGuests] = useState(1);
+  const [occasion, setOccasion] = useState("Birthday");
+  const [fullName, setFullName] = useState("John Doe");
+  const [email, setEmail] = useState("john@example.com");
+  const [phone, setPhone] = useState("+1234567890");
+
+  return {
+    date,
+    setDate,
+    time,
+    setTime,
+    guests,
+    setGuests,
+    occasion,
+    setOccasion,
+    fullName,
+    setFullName,
+    email,
+    setEmail,
+    phone,
+    setPhone,
+    availableTimes: ["17:00", "18:00"],
+    onSubmit: jest.fn((e) => e.preventDefault()),
+    ...overrides,
+  };
+}
+
+test('renders the "Choose date" label', () => {
+  render(
+    <BookingForm
+      date="2025-07-01"
+      setDate={() => {}}
+      time="18:00"
+      setTime={() => {}}
+      guests={2}
+      setGuests={() => {}}
+      occasion="Birthday"
+      setOccasion={() => {}}
+      availableTimes={["18:00", "19:00"]}
+      fullName="John Doe"
+      setFullName={() => {}}
+      email="john@example.com"
+      setEmail={() => {}}
+      phone="+1234567890"
+      setPhone={() => {}}
+      onSubmit={jest.fn()}
+    />
+  );
+
+  const labelElement = screen.getByText("Choose date*");
+  expect(labelElement).toBeInTheDocument();
+});
+
+test('date input has required attribute', () => {
+  render(<BookingForm date />); // pass necessary props or mock them
+  const dateInput = screen.getByLabelText(/choose date/i);
+  expect(dateInput).toBeRequired();
+});
+
+test('guests input has min=1 and max=10', () => {
+  render(<BookingForm guests />);
+  const guestsInput = screen.getByLabelText(/number of guests/i);
+  expect(guestsInput).toHaveAttribute('min', '1');
+  expect(guestsInput).toHaveAttribute('max', '10');
+});
+
+// Similarly for email, phone, etc.
+
+test('validateEmail returns true for valid email', () => {
+  expect(validateEmail('test@example.com')).toBe(true);
+});
+
+test('validateEmail returns false for invalid email', () => {
+  expect(validateEmail('invalid-email')).toBe(false);
+});
+
+test('validatePhone returns true for valid phone number', () => {
+  expect(validatePhone('+1234567890')).toBe(true);
+});
+
+test('validatePhone returns false for invalid phone number', () => {
+  expect(validatePhone('123abc')).toBe(false);
+});

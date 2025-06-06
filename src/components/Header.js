@@ -4,8 +4,8 @@ function Header({ children }) {
 
     return (
         <header>
-        <img src={logo} alt="Little Lemon logo" />
-        {children}
+            <img src={logo} alt="Little Lemon logo" />
+            {children}
         </header>
     );
 }

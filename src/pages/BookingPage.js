@@ -9,6 +9,10 @@ function BookingPage({submitForm}) {
   const [guests, setGuests] = useState(1);
   const [occasion, setOccasion] = useState("Birthday");
   const [availableTimes, setAvailableTimes] = useState([]);
+  const [fullName, setFullName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [specialRequests, setSpecialRequests] = useState("");
 
   const initializeTimes = () => {
     const today = new Date().toISOString().split("T")[0];
@@ -37,7 +41,7 @@ function BookingPage({submitForm}) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const formData = { date, time, guests, occasion };
+    const formData = { date, time, guests, occasion, fullName, email, phone };
     submitForm(formData);
   };
 
@@ -52,6 +56,14 @@ function BookingPage({submitForm}) {
       occasion={occasion}
       setOccasion={setOccasion}
       availableTimes={availableTimes}
+      fullName={fullName}
+      setFullName={setFullName}
+      email={email}
+      setEmail={setEmail}
+      phone={phone}
+      setPhone={setPhone}
+      specialRequests={specialRequests}
+      setSpecialRequests={setSpecialRequests}
       onSubmit={handleSubmit}
     />
   );
