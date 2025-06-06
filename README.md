@@ -24,8 +24,10 @@ It includes form validation, accessibility features (like semantic HTML and ARIA
 
 ## Project link:
 
-- [**Little Lemon Restaurant App**]()
 - [**Figma work**](https://www.figma.com/design/A0gULYHzx53i0sTHk4fU9G/Little-Lemon-Restaurant?node-id=438-94&t=528u1ipnb8EE9NBV-1)
+
+## How to run project:
+
 
 ## Screenshots:
 <img width="1000" alt="Screenshot 2025-06-06 at 18 28 42" src="https://github.com/user-attachments/assets/7c45d7ca-effe-48be-99db-ba5799230553" />
